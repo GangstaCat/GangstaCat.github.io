@@ -16,6 +16,13 @@ body {
   text-align: center;
 }
 
+#jumpto {
+  position:absolute;
+  margin: auto;
+  padding: 10px;
+  right: 550px;
+}
+
 #about {
   position: absolute;
   margin: auto;
