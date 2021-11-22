@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(bluenyancat.png);
+  background-image: url(/img/bluenyancat.png);
   background-color: #646464;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,6 +51,38 @@ img#GangstaCat {
   left: 50px;
   top: 800px;
   font-size: 120%;
+}
+
+#aboutfull {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  width: 750px;
+  left: 250px;
+}
+
+#goback {
+  position: absolute;
+  margin: auto;
+  left: 550px;
+  top: 800px;
+}
+
+#breadcat {
+  position: absolute;
+  margin: auto;
+  top: 370px;
+  right: 0px;
+  width: 250px;
+  height: 250px;
+}
+
+#loafcate {
+  position: absolute;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  top: 600px;
 }
 
 a:link {
