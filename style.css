@@ -148,12 +148,12 @@ img#GangstaCat {
 }
 
 a:link {
-  color: #007DFF;
+  color:aquamarine;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #007DFF;
+  color: aquamarine;
   text-decoration: underline;
 }
 a:hover {
