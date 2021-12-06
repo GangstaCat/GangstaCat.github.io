@@ -19,7 +19,7 @@
 <body>
   <div id="home">
     <h1>The Gangsta Website</h1>
-    <p>He's Gangsta. He's also a cat</p>
+    <p class="subtitle">He's Gangsta. He's also a cat</p>
   </div>
   <div id="jumpto">
     <h3>Jump to:</h3>
@@ -43,5 +43,38 @@
     <li><a href="https://discord.gg/s3kRB6XcMg" target="_blank">Discord server</a></li>
     <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
   </div>
+  <script>
+    const getJSON = async url => {
+      try {
+        const response = await fetch(url);
+        if(!response.ok) {
+          throw new Error(response.statusText);
+        }
+        const data = await response.json();
+        return data;
+      } catch(error) {
+        return error;
+      }
+    }
+
+    getJSON("subtitles.json").then(data => {
+      var subtitles = data.subtitles;
+
+      console.log("fetched subtitles, size: "+data.subtitles.length);
+
+      var subtitle_index = Math.floor(Math.random()*subtitles.length);
+      var subtitle = subtitles[subtitle_index];
+
+      var subtitle_element = document.getElementsByClassName("subtitle")[0];
+
+      subtitle_element.innerHTML = subtitle.text;
+      if(subtitle.color != null || subtitle.color != undefined) {
+        subtitle_element.style.color = subtitle.color;
+      }
+      console.log("picked subtitle "+subtitle_index+": "+subtitle.text);
+    }).catch(error => {
+      console.error("failed to fetch subtitles: "+error);
+    });
+  </script>
 </body>
 </html>
