@@ -44,6 +44,15 @@
     <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
   </div>
   <script>
+    const screenwidth = screen.width;
+    const screenheight = screen.height;
+    const subtitle = document.getElementsByClassName("subtitle")[0];
+
+    if (screenwidth < 500 && screenheight > 1000) {
+      subtitle.innerHTML = "Flip your phone";
+    }
+  </script>
+  <script>
     const getJSON = async url => {
       try {
         const response = await fetch(url);
