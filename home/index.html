@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="description" content="The unofficial website for GangstaCat!"> -->
+  <!-- OpenGraph stuff -->
+  <meta property="og:title" content="The Gangsta Website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gangstacat.github.io">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/845952545394130964/915205627582758972/GangstaCat.png">
+  <meta property="og:description" content="The official website for GangstaCat!">
+  <meta property="theme-color" content="#007DFF">
+  <link rel="icon" href="../img/GangstaCat.png">
+  <link rel="stylesheet" href="../style.css">
+  <title>The Gangsta Website</title>
+</head>
+<body>
+  <div id="home">
+    <h1>The Gangsta Website</h1>
+    <p class="subtitle">Ah fuck. Subtitles didn't load :(</p>
+  </div>
+  <div id="jumpto">
+    <h3>Jump to:</h3>
+    <li><a href="../about">About (full story)</a></li>
+    <li><a href="../projects">Coding projects</a></li>
+  </div>
+  <img id="GangstaCat" src="../img/GangstaCat.png" alt="Gangsta Cat">
+  <div id="about">
+    <h3>About</h3>
+    <p><b>For most of my online prescence I've been known as a blue loaf cat. But where did i get this from?</b> 
+      When I started to get active online I played a lot of Geometry Dash.
+      My icon in Geometry Dash is a blue cat. The full story of how i got there is in the <a href="about.html">about</a> section.
+      Then one day, in a server that got nuked a while ago, my friend FakeMan posted a picture of a loaf cat with my icon colors.
+      I modified it: I added glasses and a Gangsta necklace, and that has been my Profile photo for a pretty long while now.</p>
+  </div>
+  <div id="socials">
+    <h3>Most social networks you can find me on</h3>
+    <li><a href="https://youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w" target="_blank">YouTube</a></li>
+    <li><a href="https://twitter.com/GangstaCatNew" target="_blank">Twitter</a></li>
+    <li><a href="https://twitch.tv/gangstacatttv" target="_blank">Twitch</a></li>
+    <li><a href="https://discord.gg/s3kRB6XcMg" target="_blank">Discord server</a></li>
+    <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
+  </div>
+  <script>
+    try {
+      setInterval(function() {
+        const screenwidth = screen.width;
+        const screenheight = screen.height;
+        const subtitle = document.getElementsByClassName("subtitle")[0];
+
+        if (screenwidth < 500) {
+          subtitle.innerHTML = "Flip your phone";
+        }
+      }, 250);
+    } catch (err) {
+      console.error(err)
+    }
+  </script>
+  <script>
+    const getJSON = async url => {
+      try {
+        const response = await fetch(url);
+        if(!response.ok) {
+          throw new Error(response.statusText);
+        }
+        const data = await response.json();
+        return data;
+      } catch(error) {
+        return error;
+      }
+    }
+
+    getJSON("../subtitles.json").then(data => {
+      var subtitles = data.subtitles;
+
+      console.log("fetched subtitles, size: "+data.subtitles.length);
+
+      var subtitle_index = Math.floor(Math.random()*subtitles.length);
+      var subtitle = subtitles[subtitle_index];
+
+      var subtitle_element = document.getElementsByClassName("subtitle")[0];
+
+      subtitle_element.innerHTML = subtitle.text;
+      if(subtitle.color != null || subtitle.color != undefined) {
+        subtitle_element.style.color = subtitle.color;
+      }
+      console.log("picked subtitle "+subtitle_index+": "+subtitle.text);
+    }).catch(error => {
+      console.error("failed to fetch subtitles: "+error);
+    });
+  </script>
+</body>
+</html>
