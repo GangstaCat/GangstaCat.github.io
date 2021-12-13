@@ -34,6 +34,36 @@ body {
   font-size: 120%;
 }
 
+@media only screen and (max-width: 1000px) {
+  img#GangstaCat {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #about {
+    position: absolute;
+    top: 800px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  #socials {
+    position: absolute;
+    top: 1200px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;;
+  }
+}
+
 img#GangstaCat {
   position: absolute;
   margin: auto;
