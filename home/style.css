@@ -1,0 +1,91 @@
+:root {
+  --image-width: 300px;
+  --image-height: var(--image-width);
+}
+
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(/img/bluenyancat.png);
+  background-color: #646464;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.home {
+  font-size: 200%;
+  text-align: center;
+}
+
+.jumpto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+img.GangstaCat {
+  position: absolute;
+  width: var(--image-width);
+  height: var(--image-height);
+  left: 10vw;
+}
+
+.about {
+  position: absolute;
+  width: clamp(45ch, 50%, 75ch);
+  right: 5vw;
+  font-size: 120%;
+}
+
+.socials {
+  margin-top: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+a:link {
+  color:aquamarine;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: aquamarine;
+  text-decoration: underline;
+}
+a:hover {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .about {
+    width: auto;
+    text-align: center;
+  }
+
+  img.GangstaCat {
+    width: var(--image-width);
+    height: var(--image-height);
+    position: absolute;
+    top: 160vh;
+  }
+
+  .socials {
+    margin-bottom: 20px;
+    width: auto;
+    text-align: center;
+    position: absolute;
+    top: 160vh;
+  }
+}

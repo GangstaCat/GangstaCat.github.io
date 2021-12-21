@@ -13,21 +13,21 @@
   <meta property="og:description" content="The official website for GangstaCat!">
   <meta property="theme-color" content="#007DFF">
   <link rel="icon" href="../img/GangstaCat.png">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
   <title>The Gangsta Website</title>
 </head>
 <body>
-  <div id="home">
+  <div class="home">
     <h1>The Gangsta Website</h1>
     <p class="subtitle">Ah fuck. Subtitles didn't load :(</p>
   </div>
-  <div id="jumpto">
+  <div class="jumpto">
     <h3>Jump to:</h3>
     <li><a href="../about">About (full story)</a></li>
     <li><a href="../projects">Coding projects</a></li>
   </div>
-  <img id="GangstaCat" src="../img/GangstaCat.png" alt="Gangsta Cat">
-  <div id="about">
+  <img class="GangstaCat" src="../img/GangstaCat.png" alt="Gangsta Cat">
+  <div class="about">
     <h3>About</h3>
     <p><b>For most of my online prescence I've been known as a blue loaf cat. But where did i get this from?</b> 
       When I started to get active online I played a lot of Geometry Dash.
@@ -35,7 +35,7 @@
       Then one day, in a server that got nuked a while ago, my friend FakeMan posted a picture of a loaf cat with my icon colors.
       I modified it: I added glasses and a Gangsta necklace, and that has been my Profile photo for a pretty long while now.</p>
   </div>
-  <div id="socials">
+  <div class="socials">
     <h3>Most social networks you can find me on</h3>
     <li><a href="https://youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w" target="_blank">YouTube</a></li>
     <li><a href="https://twitter.com/GangstaCatNew" target="_blank">Twitter</a></li>
@@ -43,21 +43,6 @@
     <li><a href="https://discord.gg/CWcv9TnPks" target="_blank">Discord server</a></li>
     <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
   </div>
-  <script>
-    try {
-      setInterval(function() {
-        const screenwidth = screen.width;
-        const screenheight = screen.height;
-        const subtitle = document.getElementsByClassName("subtitle")[0];
-
-        if (screenwidth < 500) {
-          subtitle.innerHTML = "Flip your phone";
-        }
-      }, 250);
-    } catch (err) {
-      console.error(err)
-    }
-  </script>
   <script>
     const getJSON = async url => {
       try {

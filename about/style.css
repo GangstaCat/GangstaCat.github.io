@@ -1,0 +1,105 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --image-width: 300px;
+  --image-height: var(--image-width);
+}
+
+body {
+  background-image: url(/img/bluenyancat.png);
+  background-color: #646464;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.title {
+  font-size: 200%;
+  text-align: center;
+}
+
+.aboutfull {
+  width: clamp(45ch, 100%, 75ch);
+  margin-left: 23vw;
+  margin-right: 23vw;
+  text-align: center;
+}
+
+img.breadcat {
+  width: var(--image-width);
+  height: var(--image-height);
+  position: absolute;
+  top: 400px;
+  left: 1vw;
+}
+
+img.loafcate {
+  width: var(--image-width);
+  height: var(--image-height);
+  position: absolute;
+  top: 600px;
+  right: 1vw;
+}
+
+.jumpto {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+}
+
+a:link {
+  color:aquamarine;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: aquamarine;
+  text-decoration: underline;
+}
+a:hover {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutfull {
+    margin: 0;
+    width: auto;
+  }
+
+  img.breadcat {
+    width: var(--image-width);
+    height: var(--image-height);
+    position: absolute;
+    top: 500px;
+  }
+
+  .loafstory {
+    position: absolute;
+    top: 750px;
+  }
+
+  img.loafcate {
+    width: var(--image-width);
+    height: var(--image-height);
+    position: absolute;
+    top: 1100px;
+  }
+
+  .GangstaKitty {
+    position: absolute;
+    top: 1350px;
+  }
+
+  .jumpto {
+    position: absolute;
+    top: 1650px;
+    left: 20vw;
+  }
+}

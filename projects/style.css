@@ -1,0 +1,83 @@
+:root {
+  --image-width: 300px;
+  --image-height: var(--image-width);
+}
+
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(/img/bluenyancat.png);
+  background-color: #646464;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+img {
+  width: var(--image-width);
+  height: var(--image-height);
+}
+
+.title {
+  font-size: 200%;
+  text-align: center;
+}
+
+.projects-container {
+  margin: 10vw;
+  display: grid;
+  grid-column-gap: 20vw;
+  grid-row-gap: 20vh;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gangstakitty {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.imgscan {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+.todo {
+  grid-column: 1;
+  grid-row: 2;
+  text-align: center;
+}
+
+.jumpto {
+  text-align: center;
+}
+
+a:link {
+  color:aquamarine;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: aquamarine;
+  text-decoration: underline;
+}
+a:hover {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .imgscan {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .todo {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
