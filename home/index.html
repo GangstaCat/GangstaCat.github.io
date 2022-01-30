@@ -14,34 +14,50 @@
   <meta property="theme-color" content="#007DFF">
   <link rel="icon" href="../img/GangstaCat.png">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="scroll.js"></script>
   <title>The Gangsta Website</title>
 </head>
 <body>
-  <div class="home">
-    <h1>The Gangsta Website</h1>
-    <p class="subtitle">Ah fuck. Subtitles didn't load :(</p>
+  <div>
+    <div class="title">
+      <h1>The Gangsta Website</h1>
+    </div>
+    <h2 class="subtitle">No subtitles :(</h2>
   </div>
-  <div class="jumpto">
-    <h3>Jump to:</h3>
-    <li><a href="../about">About (full story)</a></li>
-    <li><a href="../projects">Coding projects</a></li>
-  </div>
-  <img class="GangstaCat" src="../img/GangstaCat.png" alt="Gangsta Cat">
-  <div class="about">
-    <h3>About</h3>
-    <p><b>For most of my online prescence I've been known as a blue loaf cat. But where did i get this from?</b> 
-      When I started to get active online I played a lot of Geometry Dash.
-      My icon in Geometry Dash is a blue cat. The full story of how i got there is in the <a href="/about/">about</a> section.
-      Then one day, in a server that got nuked a while ago, my friend FakeMan posted a picture of a loaf cat with my icon colors.
-      I modified it: I added glasses and a Gangsta necklace, and that has been my Profile photo for a pretty long while now.</p>
-  </div>
-  <div class="socials">
-    <h3>Most social networks you can find me on</h3>
-    <li><a href="https://youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w" target="_blank">YouTube</a></li>
-    <li><a href="https://twitter.com/GangstaCatNew" target="_blank">Twitter</a></li>
-    <li><a href="https://twitch.tv/gangstacatttv" target="_blank">Twitch</a></li>
-    <li><a href="https://discord.gg/CWcv9TnPks" target="_blank">Discord server</a></li>
-    <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
+  <div>
+    <div class="intro">
+      <h3>Hi, I'm GangstaCat</h3>
+      <p>U mad?</p>
+    </div>
+    <img class="gangstacat" src="/img/GangstaCat.png" alt="GangstaCat">
+    <div class="intro intro2">
+      <h3>I make dumb programs</h3>
+      <p>Like this website</p>
+    </div>
+    <div class="intro intro3">
+      <h3>Also i really like (loaf) cats</h3>
+      <p>Nothing special</p>
+    </div>
+    <div class="intro connections">
+      <h3>Want to talk to me?</h3>
+      <p>Places you can find me:</p>
+      <ul>
+        <li><a href="https://www.youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w">YouTube</a></li>
+        <li><a href="https://twitch.tv/gangstacatttv">Twitch</a></li>
+        <li><a href="https://discord.gg/CWcv9TnPks">Discord</a></li>
+        <li><a href="https://github.com/GangstaCat">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="intro goto">
+      <h3>Go to</h3>
+      <p>Did you really think this was it? There's more, trust me.</p>
+      <ul>
+        <li><a href="/about">About me</a></li>
+        <li><a href="/projects">Projects</a></li>
+      </ul>
+    </div>
   </div>
   <script>
     const getJSON = async url => {

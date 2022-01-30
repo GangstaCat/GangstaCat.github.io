@@ -3,13 +3,9 @@
   --image-height: var(--image-width);
 }
 
-* {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
   background-image: url(/img/bluenyancat.png);
-  background-color: #646464;
+  background-color: hsl(0, 0%, 10%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -24,9 +20,11 @@ img {
 .title {
   font-size: 200%;
   text-align: center;
+  font-family: 'Lora', serif;
 }
 
 .projects-container {
+  font-family: 'Roboto', sans-serif;
   margin: 10vw;
   display: grid;
   grid-column-gap: 20vw;
@@ -38,36 +36,49 @@ img {
   grid-column: 1;
   grid-row: 1;
   text-align: center;
+  opacity: 0;
+  animation: fade-in 2s ease 1s forwards;
 }
 
 .imgscan {
   grid-column: 2;
   grid-row: 1;
   text-align: center;
+  opacity: 0;
+  animation: fade-in 2s ease 2s forwards;
 }
 
 .binConvert {
   grid-column: 1;
   grid-row: 2;
   text-align: center;
+  opacity: 0;
+  animation: fade-in 2s ease 3s forwards;
 }
 
 .jumpto {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
 a:link {
-  color:aquamarine;
+  color:#007DFF;
   text-decoration: underline;
 }
 
 a:visited {
-  color: aquamarine;
+  color: #007DFF;
   text-decoration: underline;
 }
 a:hover {
   color: #00ffff;
   text-decoration: none;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 600px) {
