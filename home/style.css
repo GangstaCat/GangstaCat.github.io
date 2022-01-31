@@ -14,6 +14,7 @@ body {
 
 .title {
   font-family: 'Lora', serif;
+  text-align: center;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -24,6 +25,7 @@ body {
 
 .subtitle {
   display: flex;
+  text-align: center;
   align-content: center;
   justify-content: center;
   font-size: 300%;
@@ -92,6 +94,36 @@ body {
 @keyframes fade-in {
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100vh;
+  }
+
+  .intro2 {
+    margin-top: 110vh;
+  }
+
+  .intro3 {
+    margin-top: 120vh;
+  }
+
+  .connections {
+    margin-top: 230vh;
+  }
+
+  .goto {
+    margin-top: 310vh;
   }
 }
 

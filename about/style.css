@@ -77,29 +77,29 @@ a:hover {
     width: var(--image-width);
     height: var(--image-height);
     position: absolute;
-    top: 500px;
+    top: 300px;
   }
 
   .loafstory {
     position: absolute;
-    top: 750px;
+    top: 600px;
   }
 
   img.loafcate {
     width: var(--image-width);
     height: var(--image-height);
     position: absolute;
-    top: 1100px;
+    top: 900px;
   }
 
   .GangstaKitty {
     position: absolute;
-    top: 1350px;
+    top: 1200px;
   }
 
   .jumpto {
     position: absolute;
-    top: 1650px;
+    top: 1500px;
     left: 20vw;
   }
 }
