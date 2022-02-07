@@ -35,14 +35,25 @@ body {
 
 .intro {
   font-family: 'Roboto', sans-serif;
-  position: absolute;
-  top: 80vh;
-  text-align: center;
-  margin: 20vw;
   font-size: 150%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
   transform: translateX(150px);
   opacity: 0;
   transition: 2s all ease;
+}
+
+.intro1 {
+  margin-right: 50vw;
+  margin-top: 60vh;
+}
+
+.intro2 {
+  margin-left: 50vw;
+  margin-top: 40vh;
 }
 
 .intro.active {
@@ -50,46 +61,14 @@ body {
   opacity: 1;
 }
 
-.intro2 {
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  top: 120vh;
-  text-align: center;
-  margin: 20vw;
-  right: 0vw;
-  font-size: 150%;
-}
-
-.intro3 {
-  position: absolute;
-  top: 150vh;
-}
-
 .gangstacat {
   width: var(--image-width);
   height: var(--image-height);
   position: absolute;
-  top: 120vh;
-  margin: 15vw;
+  left: 40vw;
 }
 
-.connections {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-top: 140vh;
-  margin-left: 37vw;
-}
 
-.goto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-top: 200vh;
-  margin-left: 25vw;
-}
 
 @keyframes fade-in {
   to {
