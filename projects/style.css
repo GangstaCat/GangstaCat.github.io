@@ -128,3 +128,22 @@ a:hover {
 button:hover {
   background: linear-gradient(to bottom right, transparent, transparent) padding-box, linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) border-box;
 }
+
+@media only screen and (max-width: 600px) {
+  .projects-container {
+    position: absolute;
+    top: 90vh;
+    display: grid;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: auto;
+    grid-column-gap: 20vw;
+    grid-row-gap: 20vh;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .goto {
+    top: 250vh;
+  }
+}

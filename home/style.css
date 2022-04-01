@@ -152,3 +152,43 @@ a:hover {
 button:hover {
   background: linear-gradient(to bottom right, transparent, transparent) padding-box, linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) border-box;
 }
+
+@media only screen and (max-width: 600px) {
+  .intro1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  }
+
+  .gangstacat {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 130vh;
+  }
+
+  .intro2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    top: 160vh;
+  }
+
+  .intro3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    top: 190vh;
+  }
+}
