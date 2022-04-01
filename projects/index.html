@@ -4,38 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="The Gangsta Website | Projects">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gangstacat.github.io/projects">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/845952545394130964/915205627582758972/GangstaCat.png">
+  <meta property="og:description" content="Projects I made put on my website">
+  <meta property="theme-color" content="#007DFF">
   <link rel="icon" href="../img/GangstaCat.png">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="../theme.js"></script>
   <title>The Gangsta Website | Projects</title>
 </head>
-<body>
-  <div class="title">
-    <h1>Projects</h1>
+<body class="light">
+  <div class="header">
+    <div class="title-container">
+      <h1>Projects</h1>
+      <button class="switch-theme" onclick="switchTheme()">Switch Theme</button>
+    </div>
   </div>
   <div class="projects-container">
-    <div class="gangstakitty">
-      <img src="/img/loafcate.png" alt="GangstaKitty">
+    <div class="GangstaKitty">
+      <img src="../img/loafcate.png" alt="GangstaKitty">
       <h3>GangstaKitty</h3>
-      <p>My biggest project. still a simple bot with moderation, info and fun commands. Invite him <a href="https://discord.com/oauth2/authorize?client_id=847743012851286027&scope=bot&permissions=8589934591">here</a></p>
+      <p>Bot made by me. <a href="https://discord.com/oauth2/authorize?client_id=847743012851286027&scope=bot&permissions=8589934591" target="_blank">Invite him</a></p>
     </div>
-    <div class="binConvert">
-      <img src="/img/binary.gif" alt="Hackerman">
-      <h3>Binary converter</h3>
-      <p>A program that converts binary to base 10!. <a href="https://github.com/GangstaCat/binary-to-base-10" target="_blank">View it on GitHub</a></p>
-    </div>
-    <div class="imgscan">
-      <img src="/img/i becam e a loaf.png" alt="I became a loaf">
-      <h3>Image Scanning</h3>
-      <p>A doodle project that scans images and tells you how many pixels it has. Get it <a href="/downloads/image scanning.zip" download="imgscan.zip">here</a></p>
+    <div class="GangstaWebsite">
+      <img src="../img/GangstaCat.png" alt="Gangsta Website">
+      <h3>The Gangsta Website</h3>
+      <p>The website you're literally viewing. <a href="https://github.com/GangstaCat/GangstaCat.github.io" target="_blank">View the source code on GitHub</a></p>
     </div>
   </div>
-  <div class="jumpto">
-    <h3>Go to:</h3>
-    <li><a href="/home">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/secret">Secret page OoO</a></li>
+  <div class="goto">
+    <h3>Go To</h3>
+    <ul>
+      <li><a href="../home">Home</a></li>
+      <li><a href="../secret">Secret Page</a></li>
+    </ul>
   </div>
+  <script>
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.className = "dark";
+    }
+  </script>
 </body>
 </html>

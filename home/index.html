@@ -14,47 +14,48 @@
   <meta property="theme-color" content="#007DFF">
   <link rel="icon" href="../img/GangstaCat.png">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-  <script src="scroll.js"></script>
+  <script src="../theme.js"></script>
   <title>The Gangsta Website</title>
 </head>
-<body>
+<body class="light">
   <div>
-    <div class="title">
-      <h1>The Gangsta Website</h1>
+    <div class="header">
+      <div class="title-container">
+        <h1 class="title">The Gangsta Website</h1>
+        <h2 class="subtitle">No subtitles :(</h2>
+        <button class="switch-theme" onclick="switchTheme()">Switch Theme</button>
+      </div>
     </div>
-    <h2 class="subtitle">No subtitles :(</h2>
   </div>
-  <div>
-    <div class="intro intro1">
+  <div class="intro">
+    <div class="intro1">
       <h3>Hi, I'm GangstaCat</h3>
       <p>U mad?</p>
     </div>
     <img class="gangstacat" src="/img/GangstaCat.png" alt="GangstaCat">
-    <div class="intro intro2">
+    <div class="intro2">
       <h3>I make dumb programs</h3>
       <p>Like this website</p>
     </div>
-    <div class="intro intro3">
+    <div class="intro3">
       <h3>Also i really like (loaf) cats</h3>
       <p>Nothing special</p>
     </div>
-    <div class="intro connections">
+    <div class="connections">
       <h3>Want to talk to me?</h3>
       <p>Places you can find me:</p>
       <ul>
-        <li><a href="https://www.youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w">YouTube</a></li>
-        <li><a href="https://twitch.tv/gangstacatttv">Twitch</a></li>
-        <li><a href="https://discord.gg/CWcv9TnPks">Discord</a></li>
-        <li><a href="https://github.com/GangstaCat">GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UCi-mEQw6JdB81cRQ9NKuY2w" target="_blank">YouTube</a></li>
+        <li><a href="https://twitch.tv/gangstacatttv" target="_blank">Twitch</a></li>
+        <li><a href="https://discord.gg/CWcv9TnPks" target="_blank">Discord</a></li>
+        <li><a href="https://github.com/GangstaCat" target="_blank">GitHub</a></li>
       </ul>
     </div>
-    <div class="intro goto">
+    <div class="goto">
       <h3>Go to</h3>
       <p>Did you really think this was it? There's more, trust me.</p>
       <ul>
-        <li><a href="/about">About me</a></li>
         <li><a href="/projects">Projects</a></li>
       </ul>
     </div>
@@ -84,13 +85,16 @@
       var subtitle_element = document.getElementsByClassName("subtitle")[0];
 
       subtitle_element.innerHTML = subtitle.text;
-      if(subtitle.color != null || subtitle.color != undefined) {
-        subtitle_element.style.color = subtitle.color;
-      }
       console.log("picked subtitle "+subtitle_index+": "+subtitle.text);
     }).catch(error => {
       console.error("failed to fetch subtitles: "+error);
     });
+  </script>
+  <script>
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.className = "dark";
+    }
   </script>
 </body>
 </html>

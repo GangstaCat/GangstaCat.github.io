@@ -1,75 +1,86 @@
 :root {
-  --image-width: 300px;
-  --image-height: var(--image-width);
+  --main-color: #007DFF;
+  --secondary-color: #00FFFF;
+  --text-color-light: #000;
+  --text-color-dark: #FFF;
+  --bg-col-light: hsl(0, 0%, 95%);
+  --bg-col-dark: hsl(0, 0%, 10%);
 }
 
 body {
-  background-image: url(/img/bluenyancat.png);
-  background-color: hsl(0, 0%, 10%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
   overflow-x: hidden;
+  transition: background-color, 0.5s;
 }
 
-.title {
-  font-family: 'Lora', serif;
+.light {
+  background-color: var(--bg-col-light);
+  color: var(--text-color-light);
+}
+
+.dark {
+  background-color: var(--bg-col-dark);
+  color: var(--text-color-dark);
+}
+
+.gangstacat {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 10vw;
+  top: 90vh;
+}
+
+.header {
+  color: var(--text-color-dark);
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
   text-align: center;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  font-size: 300%;
-  animation: fade-in 2s ease 2s forwards;
-  opacity: 0;
 }
 
-.subtitle {
-  display: flex;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  font-size: 300%;
-  animation: fade-in 2s ease 4s forwards;
-  opacity: 0;
-}
-
-.intro {
-  font-family: 'Roboto', sans-serif;
-  font-size: 150%;
+.title-container {
+  height: 110vh;
+  font-size: 200%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  text-align: center;
-  transform: translateX(150px);
+  animation: fade-in-bottom-top 1s ease-in-out forwards;
   opacity: 0;
-  transition: 2s all ease;
+  user-select: none;
 }
 
-.intro1 {
-  margin-right: 50vw;
-  margin-top: 60vh;
-}
-
-.intro2 {
-  margin-left: 50vw;
-  margin-top: 40vh;
-}
-
-.intro.active {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.gangstacat {
-  width: var(--image-width);
-  height: var(--image-height);
+.switch-theme {
   position: absolute;
-  left: 40vw;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20vw;
+  top: 70vh;
+  animation: fade-in 1s ease-in-out forwards;
+  opacity: 0;
+  background-color: transparent;
+  background: linear-gradient(to top left, transparent, transparent) padding-box, linear-gradient(to top left, var(--main-color), var(--secondary-color)) border-box;
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  color: var(--text-color-dark);
+  font-family: 'Roboto';
 }
 
-
+@keyframes fade-in-bottom-top {
+  to {
+    height: 80vh;
+    opacity: 1;
+  }
+}
 
 @keyframes fade-in {
   to {
@@ -77,47 +88,67 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
-  
-  .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-top: 100vh;
-  }
-
-  .intro2 {
-    margin-top: 110vh;
-  }
-
-  .intro3 {
-    margin-top: 120vh;
-  }
-
-  .connections {
-    margin-top: 230vh;
-  }
-
-  .goto {
-    margin-top: 310vh;
-  }
+.intro {
+  margin-top: 100vh;
+  text-align: center;
+  font-size: 1.5em;
 }
 
-a:link {
-  color: #007DFF;
-  text-decoration: underline;
+.intro1 {
+  margin: 50px;
+  position: absolute;
+  left: 20vw;
 }
 
-a:hover {
-  color: #00FFFF;
+.intro2 {
+  margin: 50px;
+  position: absolute;
+  right: 20vw;
+  top: 140vh;
+}
+
+.intro3 {
+  margin: 50px;
+  position: absolute;
+  left: 20vw;
+  top: 170vh;
+}
+
+.connections {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  top: 220vh;
+}
+
+.goto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  top: 280vh;
+}
+
+a {
+  color: var(--main-color);
   text-decoration: underline;
 }
 
 a:visited {
-  color: #007DFF;
+  color: var(--main-color);
   text-decoration: underline;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+button:hover {
+  background: linear-gradient(to bottom right, transparent, transparent) padding-box, linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) border-box;
 }
