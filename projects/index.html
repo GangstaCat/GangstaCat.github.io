@@ -44,6 +44,9 @@
   </div>
   <script>
     const body = document.body;
+    if (!localStorage.getItem("theme")) {
+      localStorage.setItem("theme", "light")
+    }
     if (localStorage.getItem("theme") === "dark") {
       body.className = "dark";
     }
