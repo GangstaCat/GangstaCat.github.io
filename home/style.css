@@ -139,10 +139,6 @@ a:hover {
   text-decoration: none;
 }
 
-button:hover {
-  background: linear-gradient(to bottom right, transparent, transparent) padding-box, linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) border-box;
-}
-
 @media only screen and (max-width: 600px) {
   .intro1 {
     position: absolute;
