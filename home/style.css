@@ -55,24 +55,14 @@ body {
   user-select: none;
 }
 
-.switch-theme {
+#themeSelect {
   position: absolute;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
   width: 20vw;
-  top: 70vh;
-  animation: fade-in 1s ease-in-out forwards;
-  opacity: 0;
-  background-color: transparent;
-  background: linear-gradient(to top left, transparent, transparent) padding-box, linear-gradient(to top left, var(--main-color), var(--secondary-color)) border-box;
-  border-color: transparent;
-  border-width: 5px;
-  border-style: solid;
-  border-radius: 10px;
-  color: var(--text-color-dark);
-  font-family: 'Roboto';
+  top: 72vh;
 }
 
 @keyframes fade-in-bottom-top {

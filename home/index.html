@@ -24,7 +24,13 @@
       <div class="title-container">
         <h1 class="title">The Gangsta Website</h1>
         <h2 class="subtitle">No subtitles :(</h2>
-        <button class="switch-theme" onclick="switchTheme()">Switch Theme</button>
+        <!-- <button class="switch-theme" onclick="switchTheme()">Switch Theme</button> -->
+        <h6>Theme:</h6>
+        <select name="theme" id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="dynamic">Dynamic</option>
+        </select>
       </div>
     </div>
   </div>
@@ -89,15 +95,6 @@
     }).catch(error => {
       console.error("failed to fetch subtitles: "+error);
     });
-  </script>
-  <script>
-    const body = document.body;
-    if (!localStorage.getItem("theme")) {
-      localStorage.setItem("theme", "light")
-    }
-    if (localStorage.getItem("theme") === "dark") {
-      body.className = "dark";
-    }
   </script>
 </body>
 </html>
