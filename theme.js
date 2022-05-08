@@ -12,13 +12,12 @@ setInterval(() => {
     body.className = "dark";
     localStorage.setItem("theme", "dark")
   } else if (theme === "dynamic") {
+    localStorage.setItem("theme", "dynamic");
     const date = new Date();
     if (date.getHours() >= 19 || date.getHours() < 7) {
       body.className = "dark";
-      localStorage.setItem("theme", "dark")
     } else if (date.getHours() < 19 && date.getHours() >= 7) {
       body.className = "light";
-      localStorage.setItem("theme", "light");
     } else {
       alert("What the fuck are you doing");
     }
