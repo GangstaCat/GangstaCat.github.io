@@ -21,5 +21,6 @@ setInterval(() => {
     } else {
       alert("What the fuck are you doing");
     }
+    document.getElementById("themeSelect").value = localStorage.getItem("theme");
   }
 }, 10);
