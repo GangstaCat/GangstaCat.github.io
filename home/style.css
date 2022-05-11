@@ -127,6 +127,7 @@ body {
 a {
   color: var(--main-color);
   text-decoration: underline;
+  transition: color 0.2s;
 }
 
 a:visited {
@@ -137,6 +138,11 @@ a:visited {
 a:hover {
   color: var(--secondary-color);
   text-decoration: none;
+}
+
+ul {
+  /* list-style: none; */ /* uncomment this if you want the dots to be gone */
+  padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
