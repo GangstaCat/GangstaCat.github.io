@@ -26,11 +26,14 @@
         <h2 class="subtitle">No subtitles :(</h2>
         <!-- <button class="switch-theme" onclick="switchTheme()">Switch Theme</button> -->
         <h6>Theme:</h6>
-        <select name="theme" id="themeSelect">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-          <option value="dynamic">Dynamic</option>
-        </select>
+        <div class="themeSelector">
+          <div>
+            <div onclick="setTheme(0)"><p>Light</p></div>
+            <div onclick="setTheme(1)"><p>Dark</p></div>
+            <div onclick="setTheme(2)"><p>Dynamic</p></div>
+          </div>
+          <div id="selectedThemeIndicator"></div>
+        </div>
       </div>
     </div>
   </div>
