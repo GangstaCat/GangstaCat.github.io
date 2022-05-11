@@ -139,6 +139,11 @@ a:hover {
   text-decoration: none;
 }
 
+ul {
+  /* list-style: none; */ /* uncomment this if you want the dots to be gone */
+  padding: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .intro1 {
     position: absolute;
