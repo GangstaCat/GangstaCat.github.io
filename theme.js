@@ -1,10 +1,14 @@
-if (!localStorage.getItem("theme")) {
-  localStorage.setItem("theme", "light");
-}
+function loadTheme() {
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "light");
+  }
+  const savedTheme = localStorage.getItem("theme");
+  document.getElementById("themeSelect").value = savedTheme;
 
-setInterval(() => {
-  setTheme(document.getElementById("themeSelect").value);
-}, 10);
+  setInterval(() => {
+    setTheme(document.getElementById("themeSelect").value);
+  }, 10);
+}
 
 function setTheme(style) {
   localStorage.setItem("theme", style);
