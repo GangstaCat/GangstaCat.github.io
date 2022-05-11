@@ -1,26 +1,28 @@
-if (!localStorage.getItem("theme")) {
-  localStorage.setItem("theme", "light");
+function loadTheme() {
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "light");
+  }
+  const savedTheme = localStorage.getItem("theme");
+  document.getElementById("themeSelect").value = savedTheme;
+
+  setInterval(() => {
+    setTheme(document.getElementById("themeSelect").value);
+  }, 10);
 }
 
-setInterval(() => {
-  let theme = document.getElementById("themeSelect").value;
-  const body = document.body;
-  if (theme === "light") {
-    body.className = "light";
-    localStorage.setItem("theme", "light");
-  } else if (theme === "dark") {
-    body.className = "dark";
-    localStorage.setItem("theme", "dark")
-  } else if (theme === "dynamic") {
-    localStorage.setItem("theme", "dynamic");
+function setTheme(style) {
+  localStorage.setItem("theme", style);
+
+  if (style == "dynamic") {
     const date = new Date();
     if (date.getHours() >= 19 || date.getHours() < 7) {
-      body.className = "dark";
+      style = "dark";
     } else if (date.getHours() < 19 && date.getHours() >= 7) {
-      body.className = "light";
+      style = "light";
     } else {
       alert("What the fuck are you doing");
     }
-    theme = localStorage.getItem("theme");
   }
-}, 10);
+
+  document.body.className = style;
+}
