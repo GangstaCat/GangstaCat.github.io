@@ -141,7 +141,8 @@ a:hover {
 }
 
 ul {
-  /* list-style: none; */ /* uncomment this if you want the dots to be gone */
+  list-style: none;
+  /* uncomment this if you want the dots to be gone */
   padding: 0;
 }
 
@@ -171,7 +172,7 @@ ul {
   border-radius: 5px;
   top: -5px;
   position: relative;
-  transition: all 0.4s cubic-bezier(.65,.05,.36,1);
+  transition: all 0.4s cubic-bezier(.65, .05, .36, 1);
 }
 
 @media only screen and (max-width: 600px) {
