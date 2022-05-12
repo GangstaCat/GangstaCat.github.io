@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <script src="../theme.js"></script>
+  <script src="../assets/scripts/common.js"></script>
   <title>The Gangsta Website | Projects</title>
 </head>
 <body class="light" onload="loadTheme()">
@@ -44,10 +45,12 @@
     <h3>Go To</h3>
     <ul>
       <li><a href="../home">Home</a></li>
-      <li><a href="../util/secret/">Secret Page</a></li>
+      <video id="yes" style="display: none;" muted loop preload="auto" src="./../assets/yes.mp4"></video>
+      <li><a onclick="yes()">Secret Page</a></li>
     </ul>
   </div>
   <script>
+    loadSP();
     const body = document.body;
     if (!localStorage.getItem("theme")) {
       localStorage.setItem("theme", "light")
