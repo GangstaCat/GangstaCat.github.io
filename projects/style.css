@@ -7,14 +7,6 @@
   --bg-col-dark: hsl(0, 0%, 10%);
 }
 
-#yes {
-  pointer-events: none;
-  position: absolute;
-  margin-left: -25vw;
-  width: 69vw;
-  transform: translate(-10vw);
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -23,11 +15,21 @@ body {
   transition: background-color, 0.5s;
 }
 
+#yes {
+  pointer-events: none;
+  position: absolute;
+  margin-left: -25vw;
+  width: 69vw;
+  transform: translate(-10vw);
+}
+
+
 img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
 }
+
 
 .light {
   background-color: var(--bg-col-light);
