@@ -65,9 +65,9 @@ img {
 
 .themeSelector {
   width: max-content;
-  position: relative;
+  position: absolute;
   left: 50%;
-  top: 70px;
+  top: 67.8vh;
   transform: translateX(-50%);
 }
 
@@ -95,11 +95,14 @@ img {
 
 .projects-container {
   position: absolute;
-  top: 90vh;
+  width: 70vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80vh;
+  padding: 10vh;
   display: grid;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  width: auto;
   grid-column-gap: 20vw;
   grid-row-gap: 20vh;
   grid-template-columns: 1fr 1fr;
@@ -108,13 +111,18 @@ img {
 
 .goto {
   position: absolute;
+  width: 50vw;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  text-align: center;
   top: 170vh;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 @keyframes fade-in-bottom-top {
@@ -133,6 +141,7 @@ img {
 a {
   color: var(--main-color);
   text-decoration: underline;
+  transition: color 0.2s;
 }
 
 a:visited {
@@ -151,16 +160,10 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
   .projects-container {
-    position: absolute;
-    top: 90vh;
-    display: grid;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    width: auto;
-    grid-column-gap: 20vw;
-    grid-row-gap: 20vh;
+    margin: 0;
+    margin-top: 80vh;
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 10vh;
   }
 
   .goto {

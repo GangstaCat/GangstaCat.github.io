@@ -55,16 +55,6 @@ body {
   user-select: none;
 }
 
-#themeSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20vw;
-  top: 72vh;
-}
-
 @keyframes fade-in-bottom-top {
   to {
     height: 80vh;
@@ -79,49 +69,24 @@ body {
 }
 
 .intro {
-  margin-top: 100vh;
+  margin-top: 80vh;
+  padding-top: 20vh;
   text-align: center;
   font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro1 {
-  margin: 50px;
-  position: absolute;
-  left: 20vw;
+  padding-right: 20vw;
 }
 
 .intro2 {
-  margin: 50px;
-  position: absolute;
-  right: 20vw;
-  top: 140vh;
+  padding-right: 50vw;
 }
 
 .intro3 {
-  margin: 50px;
-  position: absolute;
-  left: 20vw;
-  top: 170vh;
-}
-
-.connections {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  top: 220vh;
-}
-
-.goto {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  top: 280vh;
+  padding-left: 50vw;
 }
 
 a {
@@ -147,7 +112,8 @@ ul {
 
 .themeSelector {
   width: max-content;
-  position: relative;
+  position: absolute;
+  top: 67.8vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -175,41 +141,29 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
-  .intro1 {
+  .title-container {
     position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
+    font-size: 1.5rem;
   }
 
-  .gangstacat {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 130vh;
+  .intro {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50vh;
+  }
+
+  .intro1 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .intro2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    top: 160vh;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .intro3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    top: 190vh;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
