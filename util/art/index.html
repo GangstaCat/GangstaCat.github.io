@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="The Gangsta Website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gangstacat.net/art">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/845952545394130964/915205627582758972/GangstaCat.png">
+  <meta property="og:description" content="Little gallery of all the art i have">
+  <meta property="theme-color" content="#007DFF">
+  <link rel="icon" href="/assets/img/GangstaCat.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="/assets/scripts/theme.js"></script>
+  <title>The Gangsta Website | Art Gallery</title>
+</head>
+<body class="light" onload="loadTheme(), loadRandArt()">
+  <div class="header">
+    <div class="title-container">
+      <h1>Art Gallery</h1>
+      <h6>Theme:</h6>
+      <div class="themeSelector">
+        <div>
+          <div onclick="setTheme(0)"><p>Light</p></div>
+          <div onclick="setTheme(1)"><p>Dark</p></div>
+          <div onclick="setTheme(2)"><p>Dynamic</p></div>
+        </div>
+        <div id="selectedThemeIndicator"></div>
+      </div>
+    </div>
+  </div>
+  <div class="art-container">
+    <div class="disclaimer">
+      <div id="left">
+        <p><strong>Click to get a new random art piece</strong></p>
+      </div>
+      <div id="right">
+        <p><strong>This is not very optimized, so it might show the same image in a short timespan</strong></p>
+      </div>
+    </div>
+    <img id="artImg">
+  </div>
+  <p id="goback"><a href="/projects/">Go back</a></p>
+  <script src="/assets/scripts/art.js"></script>
+</body>
+</html>
