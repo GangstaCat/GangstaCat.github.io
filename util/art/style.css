@@ -119,6 +119,22 @@ body {
   margin-top: 5vw;
 }
 
+a {
+  color: var(--main-color);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:visited {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
 @keyframes fade-in-bottom-top {
   to {
     height: 80vh;
