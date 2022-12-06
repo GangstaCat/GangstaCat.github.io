@@ -19,8 +19,7 @@ function getBrowser() {
   } else if (userAgent.includes('Chrome/')) {
     return `Chrome v${userAgent.split('Chrome/')[1]}`
   } else if (userAgent.includes('Safari/')) {
-    // Safari
-    // why is there nothing here
+    return `Safari v${userAgent.split('Safari/')[1]}`
   }
 
 }
@@ -30,7 +29,7 @@ Geolocation.getCurrentPosition(GeolocationPosition => {
   coordstext.innerHTML = coords;
 })
 
-// get some shit and wait until ip is fetched for some reason
+// fetch some shit and update the html
 fetch('http://myip.wtf/json')
   .then((response) => response.json())
   .then((data) => {
@@ -40,10 +39,10 @@ fetch('http://myip.wtf/json')
     citytext.innerHTML = city;
     isptext.innerHTML = isp;
     iptext.innerHTML = ip;
-    browsertext.innerHTML = `${getBrowser()}`
-    ostext.innerHTML = `${navigator.oscpu.split(";")[0]} ${navigator.oscpu.split(";")[2]}`
-    // TODO: figure out how to get the OS out of the userAgent because chromium won't accept my authority
   });
+browsertext.innerHTML = `${getBrowser()}`
+const os = userAgent.match(/\(([^)]+)\)/g)[0];
+ostext.innerHTML = os.replace(/\(*\)*/g, "");
 
 console.log(navigator)
 // just for reference
