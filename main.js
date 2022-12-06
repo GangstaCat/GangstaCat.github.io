@@ -1,3 +1,4 @@
+// get all the elements, haha bloat go brrrr
 const content = document.getElementsByClassName("content")[0]
 const iptext = document.getElementById("ip")
 const coordstext = document.getElementById("coords")
@@ -10,6 +11,7 @@ const Geolocation = navigator.geolocation;
 
 const { userAgent } = navigator;
 function getBrowser() {
+  // get browser and version, shamelessly stolen from some website
   if (userAgent.includes('Firefox/')) {
     return `Firefox v${userAgent.split('Firefox/')[1]}`
   } else if (userAgent.includes('Edg/')) {
@@ -18,19 +20,20 @@ function getBrowser() {
     return `Chrome v${userAgent.split('Chrome/')[1]}`
   } else if (userAgent.includes('Safari/')) {
     // Safari
+    // why is there nothing here
   }
 
 }
-
+// get geolocation
 Geolocation.getCurrentPosition(GeolocationPosition => {
   const coords = `${GeolocationPosition.coords.latitude}, ${GeolocationPosition.coords.longitude}`;
   coordstext.innerHTML = coords;
 })
 
+// get some shit and wait until ip is fetched for some reason
 fetch('http://myip.wtf/json')
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
     const ip = data.YourFuckingIPAddress;
     const isp = data.YourFuckingISP;
     const city = data.YourFuckingLocation;
@@ -43,3 +46,4 @@ fetch('http://myip.wtf/json')
   });
 
 console.log(navigator)
+// just for reference
