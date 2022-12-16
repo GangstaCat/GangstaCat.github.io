@@ -6,8 +6,8 @@ const isptext = document.getElementById("isp")
 const citytext = document.getElementById("city")
 const browsertext = document.getElementById("browser")
 const ostext = document.getElementById("os")
-
-const Geolocation = navigator.geolocation;
+const doxximg = document.getElementById("doxximg")
+const body = document.body;
 
 const { userAgent } = navigator;
 function getBrowser() {
@@ -23,11 +23,30 @@ function getBrowser() {
   }
 
 }
+
+// get a random number
+const randomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min)
+};
+
+// get a random image
+const images = ["assets/caterpillar.png",
+  "assets/eminem.png",
+  "assets/fenc.png",
+  "assets/woo.jpg"];
+
+body.style.backgroundImage = `url('${images[randomNumber(0, images.length)]}')`
+
 // get geolocation
-Geolocation.getCurrentPosition(GeolocationPosition => {
-  const coords = `${GeolocationPosition.coords.latitude}, ${GeolocationPosition.coords.longitude}`;
-  coordstext.innerHTML = coords;
-})
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(position => {
+    coordstext.innerHTML = `${position.coords.latitude}, ${position.coords.longitude} `
+    content.style.opacity = 1;
+    const audio = new Audio('assets/doxx.mp3');
+    audio.loop = true;
+    audio.play()
+  }, err => alert("A C C E P T"))
+}
 
 // fetch some shit and update the html
 fetch('http://myip.wtf/json')
@@ -40,7 +59,9 @@ fetch('http://myip.wtf/json')
     isptext.innerHTML = isp;
     iptext.innerHTML = ip;
   });
-browsertext.innerHTML = `${getBrowser()}`
+
+// update some more text and get the os out of the useragent
+browsertext.innerHTML = `${getBrowser()} `
 const os = userAgent.match(/\(([^)]+)\)/g)[0];
 ostext.innerHTML = os.replace(/\(*\)*/g, "");
 
