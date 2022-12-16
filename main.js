@@ -49,7 +49,7 @@ if (navigator.geolocation) {
 }
 
 // fetch some shit and update the html
-fetch('http://myip.wtf/json')
+fetch('https://myip.wtf/json')
   .then((response) => response.json())
   .then((data) => {
     const ip = data.YourFuckingIPAddress;
