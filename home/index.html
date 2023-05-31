@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>GangstaCat</title>
+</head>
+
+<body>
+  <div class="header">
+    <!-- title div -->
+    <div class="title">
+      <h1>GangstaCat</h1>
+      <h6>Silly little programmer</h6>
+    </div>
+  </div>
+  <div class="intro">
+    <!-- intro div -->
+    <h1>I'm GangstaCat</h1>
+    <h6>I don't really do anything, I'm just bored most of the time and I have no idea what to put here</h6>
+    <img src="../assets/wawa-cat-wawa.gif" id="wawacat">
+  </div>
+  <div class="specs">
+    <!-- specs div -->
+    <h1>Specs</h1>
+    <div class="specsgrid">
+      <!-- the actual specs, h1 element has to be outside this div or it will be counted as a grid child -->
+      <div id="stats">
+        <ul>
+          <li>Age: 14</li>
+          <li>Pronouns: he/him</li>
+          <li>Sexuality: Heterosexual (Straight)</li>
+          <li>Gender: Cis male</li>
+          <li>Height: 175cm (5'9")</li>
+          <li>Nationality: Dutch</li>
+        </ul>
+      </div>
+      <div id="socials">
+        <ul>
+          <li><a href="https://twitter.com/GangstaCat__">Twitter</a></li>
+          <li><a href="https://github.com/GangstaCat">GitHub</a></li>
+          <li><a href="https://ngl.link/GangstaCat__">NGL</a></li>
+          <li><a href="https://en.pronouns.page/@gangstacat__">Pronouns Page</a></li>
+          <li>
+            <div class="tooltip">
+              <!-- copy the discord tag -->
+              <button id="discord" onclick="copy()" onmouseout="outFunc()">
+                <!-- i have no idea what this means i copied it from some website -->
+                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                GangstaCat#0458
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
