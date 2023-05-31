@@ -541,3 +541,12 @@ a:visited {
   visibility: visible;
   opacity: 1;
 }
+
+.soon {
+  width: 100vw;
+  height: 50vh;
+  font-size: 200%;
+  display: flex;
+  align-content: center;
+  text-align: center;
+}
