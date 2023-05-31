@@ -481,6 +481,7 @@ a:visited {
 .specs {
   font-size: 200%;
   margin-left: 10vw;
+  margin-bottom: 10vh;
   width: 40vw;
   height: 60vh;
 }
@@ -549,4 +550,5 @@ a:visited {
   display: flex;
   align-content: center;
   text-align: center;
+  justify-content: center;
 }
