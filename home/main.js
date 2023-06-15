@@ -1,6 +1,6 @@
 function copy() {
   // copy discord tag to clipboard and change the text
-  navigator.clipboard.writeText("GangstaCat#0458");
+  navigator.clipboard.writeText("gangstacat__");
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copied to clipboard";
 }
